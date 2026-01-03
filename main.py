@@ -33,18 +33,18 @@ user_histories = defaultdict(lambda: deque(maxlen=MAX_HISTORY_TURNS * 2))
 client2 = discord.Client()
 @client2.event
 async def on_ready():
-    print(f'Online → {client.user} (selfbot con Gemini nuevo SDK)')
+    print(f'Online → {client2.user} (selfbot con Gemini nuevo SDK)')
 
 @client2.event
 async def on_message(message: discord.Message):
-    if message.author == client.user:
+    if message.author == client2.user:
         return
 
     content_lower = message.content.lower()
     triggered = (
         'jks' in content_lower or
         'jkscrept' in content_lower or
-        bot.user in message.mentions
+        client2.user in message.mentions
     )
     invites = re.findall(r'(?:discord\.gg/|discord(?:app)?\.com/invite/)([\w\-]+)', message.content)
     for code in invites:
