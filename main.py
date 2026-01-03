@@ -6,6 +6,7 @@ import discord
 from discord.ext import commands
 import requests
 import re
+import os
 import asyncio
 from collections import defaultdict, deque
 
@@ -113,4 +114,4 @@ async def on_message(message: discord.Message):
             await message.channel.send("Nigger")
 
 # ── Ejecutar ─────────────────────────────────────────────────────
-client2.run(DISCORD_TOKEN)
+client2.run(os.getenv(DISCORD_TOKEN))
