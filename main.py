@@ -114,4 +114,4 @@ async def on_message(message: discord.Message):
             await message.channel.send("Nigger")
 
 # ── Ejecutar ─────────────────────────────────────────────────────
-client2.run(os.getenv(DISCORD_TOKEN))
+client2.run('MTM1ODc1MDEwNDgzOTkxMzUzNA.GaygEg.22h9cvcwEaeEQSXh1lT_25SQ4wuNnpvuvQ9HvM')
