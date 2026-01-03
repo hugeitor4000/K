@@ -30,7 +30,7 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 user_histories = defaultdict(lambda: deque(maxlen=MAX_HISTORY_TURNS * 2))
 
 # ── Bot ──────────────────────────────────────────────────────────
-bot = commands.Bot(command_prefix='!',self_bot=False)
+bot = commands.Bot(command_prefix='!',self_bot=True)
 
 @bot.event
 async def on_ready():
