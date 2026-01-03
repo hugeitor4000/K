@@ -16,7 +16,7 @@ from google.genai import types
 
 # ── Configuración ───────────────────────────────────────────────
 GEMINI_API_KEY = "AIzaSyDJVXuqvNLeymsUjp7PvG-bDOsZEByDemU"
-DISCORD_TOKEN  = "MTM1ODc1MDEwNDgzOTkxMzUzNA.GaygEg.22h9cvcwEaeEQSXh1lT_25SQ4wuNnpvuvQ9HvM"   # ¡CAMBIAR!
+DISCORD_TOKEN  = "MTM1OTI4MDc0OTUxMzAxOTQwMg.GGj9SB.ChPkkYt-ZQHY-B4wQk0Sin_DrNBOYoJ2ApN3ag"   # ¡CAMBIAR!
 
 MAX_HISTORY_TURNS = 15          # ~30 mensajes (user + model)
 # Cada "turno" ≈ 1 mensaje usuario + 1 respuesta modelo
