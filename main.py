@@ -29,16 +29,15 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 # Almacenamiento por usuario: chat history (deque para límite)
 user_histories = defaultdict(lambda: deque(maxlen=MAX_HISTORY_TURNS * 2))
 
-# ── Bot ──────────────────────────────────────────────────────────
-bot = commands.Bot(command_prefix='!',self_bot=True)
-
-@bot.event
+# ── Bot ────────────────────────────────────
+client2 = discord.Client()
+@client2.event
 async def on_ready():
-    print(f'Online → {bot.user} (selfbot con Gemini nuevo SDK)')
+    print(f'Online → {client.user} (selfbot con Gemini nuevo SDK)')
 
-@bot.event
+@client2.event
 async def on_message(message: discord.Message):
-    if message.author == bot.user:
+    if message.author == client.user:
         return
 
     content_lower = message.content.lower()
@@ -114,4 +113,4 @@ async def on_message(message: discord.Message):
             await message.channel.send("Nigger")
 
 # ── Ejecutar ─────────────────────────────────────────────────────
-bot.run(DISCORD_TOKEN)
+client2.run(DISCORD_TOKEN)
